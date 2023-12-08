@@ -45,11 +45,28 @@
         <a href="#" class="btn">Saber mas</a>
     </section>
     <section class="content price">
-        <article class="contain">
+        <!-- <article class="contain">
             <h2 class="title">Precio</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure ducimus maiores facilis similique asperiores nisi impedit vero ipsam molestiae? Et, autem temporibus quaerat sit harum repellendus unde inventore ipsa.</p>
             <a href="#" class="btn">Saber precio</a>
-        </article>
+        </article> -->
+        
+        <table class="table table-hover table-striped">
+            <thead class="bg-gradient text-white">
+              <tr>        
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let post of Posts">        
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>{{ post.author }}</td>
+              </tr>
+            </tbody>
+          </table>
     </section>
     <section class="content contact">
         <h2 class="title">Contacto</h2>
