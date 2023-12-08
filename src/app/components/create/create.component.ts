@@ -33,6 +33,6 @@ export class CreateComponent implements OnInit {
 
   onSubmit() {
     this.postService.createPost(this.postForm.value)
-    this.router.navigate([''])
+    this.router.navigate(['/show'])
   }
 }

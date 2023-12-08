@@ -48,7 +48,7 @@ export class EditComponent implements OnInit {
     const id = this.activeRoute.snapshot.paramMap.get('id');   
 
     this.postService.updatePost(this.editForm.value, id);
-    this.router.navigate(['']);
+    this.router.navigate(['/show']);
     //console.log(this.editForm.value) //podemos ver los valores capturados
   }
 
