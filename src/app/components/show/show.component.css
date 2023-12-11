@@ -1,0 +1,8 @@
+.bg{
+    background: url(../../../assets/costos.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bg-color{
+    background-color: black;
+}

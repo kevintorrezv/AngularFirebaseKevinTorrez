@@ -1,0 +1,15 @@
+.bg{
+    background: url(../../../assets/header.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bglogin{
+    background-color:rgba(127, 255, 212, 0.432);
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 5%;
+    
+}

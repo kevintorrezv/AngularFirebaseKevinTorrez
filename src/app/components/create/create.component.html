@@ -1,31 +1,42 @@
-<div class="container">    
+<style>
+    .let{
+        color:beige;
+        text-transform: uppercase;
+        font-weight: 500;
+    }   
 
-    <div class="row align-items-md-stretch">
-        <div class="col-md-12">
-          <div class="h-100 p-4 text-white bg-dark rounded-3 text-center">
-            <h3>CRUD Angular + Firebase</h3>            
-            <img src="../../../assets/angular.png" width="100" height="100">        
-          </div>
+</style>
+<div class="bg" style="padding: 60px;">
+    <div class="container">    
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-12">
+              <div class="h-100 p-4 text-white bg-dark rounded-3 text-center">
+                <h3>CRUD Angular + Firebase</h3>            
+                <img src="../../../assets/angular.png" width="100" height="100">        
+              </div>
+            </div>
+        
+    </div>
+    <h2 class="text-center">Component CREATE</h2>
+    
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
+    
+        <div class="mb-3">
+            <label class="form-label let">Title</label>
+            <input formControlName="title" type="text" class="form-control" required>      
         </div>
+        <div class="mb-3">
+            <label class="form-label let">Content</label>
+            <input formControlName="content" type="text" class="form-control" required>      
+        </div>
+        <div class="mb-3">
+            <label class="form-label let">Author</label>
+            <input formControlName="author" type="text" class="form-control" required>       
+        </div>
+        
+        <button [disabled]="!postForm.valid" type="submit" class="btn btn-dark">CREAR</button>
+    
+    </form>
     
 </div>
-<h2 class="text-center">Component CREATE</h2>
-
-<form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
-
-    <div class="mb-3">
-        <label class="form-label">Title</label>
-        <input formControlName="title" type="text" class="form-control" required>      
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Content</label>
-        <input formControlName="content" type="text" class="form-control" required>      
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Author</label>
-        <input formControlName="author" type="text" class="form-control" required>       
-    </div>
-    
-    <button [disabled]="!postForm.valid" type="submit" class="btn btn-primary">Store</button>
-
-</form>
