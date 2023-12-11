@@ -25,13 +25,25 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  /* onSubmit() {
     this.userService.register(this.formReg.value)
       .then(response => {
         console.log(response);
         this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
+  } */
+  onSubmit() {
+    this.userService.register({
+      email: this.formReg.value.email,
+      password: this.formReg.value.password,
+      firstName: this.formReg.value.firstName,
+      lastName: this.formReg.value.lastName,
+    })
+    .then(response => {
+      console.log(response);
+      this.router.navigate(['/login']);
+    })
+    .catch(error => console.log(error));
   }
-
 }

@@ -1,4 +1,4 @@
-<div class="bg" style="padding: 173px;">
+<div class="bg" style="padding: 85px;">
     <div class="bglogin">
         <h2 style="text-align: center;">Registro de usuario</h2>
 <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
@@ -10,6 +10,19 @@
         <label class="form-label">Password</label>
         <input type="password" class="form-control" formControlName="password">
     </div>
+
+
+    <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" formControlName="firstName">
+</div>
+<div class="mb-3">
+    <label class="form-label">Apellido</label>
+    <input type="text" class="form-control" formControlName="lastName">
+</div>
+
+
+
     <input style="margin-left: 165px;" type="submit" value="Enviar">
 </form>
     </div>
